@@ -1,16 +1,20 @@
 import os
+from unittest.util import strclass
 from PIL import Image
 import io
 
 class FS():
-    def __init__(self, dir_t, image_t, file_t) -> None:
+    def __init__(self, dir_t : str, image_t : str, file_t : str) -> None:
         self.dir = dir_t
         self.image = image_t
         self.file = file_t
         self.array = bytearray()
     
     def create_dir(self) -> None:
-        os.mkdir(self.dir)
+        try:
+            os.mkdir(self.dir)
+        except:
+            print("Unable to create dir")
         
     def read_dir(self) -> None:
         content = os.listdir(self.dir)
@@ -33,11 +37,17 @@ class FS():
         image.show()
         
     def write(self):
-        f = os.open(self.file, os.O_APPEND | os.O_CREAT | os.O_TRUNC)
+        f = os.open(self.file, os.O_WRONLY | os.O_APPEND | os.O_CREAT | os.O_TRUNC)
         try: 
             os.write(f, self.array)
         finally:
             os.close(f)
         
 if __name__ == "__main__":
-    pass
+    FileSys = FS("test_dir", "Lenna.png", "write.txt")
+    
+    FileSys.create_dir()
+    FileSys.read_dir()
+    FileSys.display()
+    FileSys.write()
+    FileSys.display()
