@@ -1,0 +1,18 @@
+#env:
+.venv/
+venv/
+
+# Python:
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.pyo
+*.pyd
+*.pdb
+
+# IDE
+.vscode/
+
+# misc
+misc/
