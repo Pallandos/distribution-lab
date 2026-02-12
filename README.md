@@ -14,4 +14,10 @@ Voir le fichier `sysfiles.py`. On peut le lancer pour voir les étapes demandée
 De même, lancer le fichier `mem.py` pour voir les étapes. 
 
 > [!WARNING]
-> Ne pas oublier d'installer et de lancer son serveur memcache local. 
+> Ne pas oublier d'installer et de lancer son serveur memcache local.
+
+
+## LRU
+
+Mon implémentation de LRU se trouve dans le fichier `LeastRecentUsed.py`. 
+
