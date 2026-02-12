@@ -21,3 +21,6 @@ De même, lancer le fichier `mem.py` pour voir les étapes.
 
 Mon implémentation de LRU se trouve dans le fichier `LeastRecentUsed.py`. 
 
+## Version LRU de mem
+
+Dans le fichier `mem_v2.py` on peut trouver la version qui utilise LRU.
